@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
         <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-image: linear-gradient(to left, rgb(23, 1, 85),rgb(52, 0, 82));
+            }
             body {
-                background-image: linear-gradient(to top, rgb(23, 1, 85),rgb(82, 0, 75));
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 color: rgb(163, 142, 255);
                 text-align: center;
-                height: 200vh;
+                min-height: 100vh;
+                width: auto;
             }
             a {
                 color: rgb(120, 100, 200);
                 text-decoration: none;
             }
             a:visited {
-                color: rgb(100, 80, 180);
+                color: rgb(85, 0, 124);
             }
             a:hover {
-                color: rgb(163, 142, 255);
+                color: rgb(192, 180, 247);
                 text-decoration: underline;
             }
             ol {
-                text-align: left;
+                text-align: center;
                 display: inline-block;
-            } 
+            }
+            
+            hr {
+                color: rgb(163, 142, 255);
+                border: 1px solid rgb(163, 142, 255);
+            }
+                .back-btn, button {
+                    background-color: rgb(112, 94, 194);
+                    color: white;
+                    border: none;
+                    padding: 10px 18px;
+                    border-radius: 8px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    display: inline-block;
+                    line-height: 1.2;
+                    box-sizing: border-box;
+                    margin-top: 15px;
+                }
+                br {
+                    margin-bottom: 2em;
+                }
         </style>
 <head>
     <link rel="icon" href="favicon.png">
     <title>awesome cool list</title>
 </head>
 <body>
-    <a href="index.html" style="text-decoration: none;">
-        <button
-        style="background-color: rgb(120, 100, 200);
-        color: white; 
-        border: none; 
-        padding: 10px 18px; 
-        border-radius: 8px; 
-        font-size: 1em; 
-        cursor: pointer; 
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-        Go back
-        </button>
+
+    <a href="index.html">
+        <button class="back-btn">Go back</button>
     </a>
     <h1>top five gleegles</h1>
-    <hr style="border: 1px solid rgb(163, 142, 255);" width="50%">
+    <hr style="border: 1px solid;" width="30%">
     <ol style="text-align: left;">
         <li>ffsqwg</li>
         <img src = "gleegle1.jpeg" alt = "gleegle1" width = "300" height = "300">

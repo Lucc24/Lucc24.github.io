@@ -2,23 +2,24 @@
 <html>
         <style>
             html, body {
-                margin: 0;
-                padding: 0;
-                background-image: linear-gradient(to left, rgb(23, 1, 85),rgb(82, 0, 71));
+                background-image: linear-gradient(to left, rgb(23, 1, 85),rgb(52, 0, 82));
             }
             body {
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 color: rgb(163, 142, 255);
                 text-align: center;
-                min-height: 100vh;
-                width: auto;
+                height: 100vh;
+                width: 100%;
+                margin-left: -3px;
+                margin-bottom: -5px;
+                overflow: hidden;
             }
             a {
                 color: rgb(120, 100, 200);
                 text-decoration: none;
             }
             a:visited {
-                color: rgb(183, 0, 255);
+                color:  rgb(204, 120, 230);
             }
             a:hover {
                 color: rgb(192, 180, 247);
@@ -37,6 +38,7 @@
 <head>
     <link rel="icon" href="favicon.png">
     <title>wow incredible haha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <a href="list.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none;">
@@ -54,7 +56,7 @@
     </a>
     <a href="https://studio.code.org/projects/gamelab/JleumA7faJVnflBPiVw_0CNx9EkTNoA5ZJxCznNXiYk" target="_blank" id="top-left-btn" style="position: absolute; top: 20px; left: 20px; text-decoration: none;">
         <button
-        style="background-color: rgb(138, 60, 138);
+        style="background-color: rgb(118, 7, 182);
         color: white; 
         border: none; 
         padding: 10px 18px; 
@@ -67,7 +69,7 @@
     </a>
     <h1><span id="lucca-click" style="cursor:pointer; color:inherit;">L</span>ucca <span id="t-click" style="cursor:pointer; color:inherit;">T</span>'s cool site</h1>
     <hr style="border: 1px solid;" width="80%">
-    <p>Hi there! I'm Lucca Townsend, a computer science student at Warren Tech central. I know beginner-level javascript and am currently learning python!</p>
+    <p>I'm Lucca Townsend, a computer science student at Warren Tech central. I know beginner-level javascript and am currently learning python!</p>
     <p>This is my personal website, where I will be posting projects and other cool stuff I make.</p>
     <hr style="border: 1px solid;" width="40%">
     <h3>Feel free to check out my <a href="contactme.html" style="text-decoration: none;">contact page! </a> </h3>
@@ -76,17 +78,19 @@
         <li>Fun fact: crazy</li>
         <li>Fun fact: incredible</li>
         <li>Fun fact: great googly moogly</li>
+        <li>Fun fact: i needed a list for this assignment </li>
     </ul>
     <script>
         document.getElementById('lucca-click').onclick = function() {
             document.body.style.backgroundImage = "url('dontworry.png')";
+            document.body.style.marginTop = "-20px";
             document.body.style.backgroundSize = "center";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundPosition = "center";
         };
         document.getElementById('t-click').onclick = function() {
             document.body.style.backgroundImage = "none";
-            document.body.style.backgroundColor = "rgb(15, 0, 32)";
+            document.body.style.backgroundImage = "linear-gradient(to left, rgb(23, 1, 85),rgb(52, 0, 82)";
         };
 // yeah this was made with ai but its funny so uhhh
     </script>
