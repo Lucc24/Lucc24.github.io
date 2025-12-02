@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html>
-        <style>
-            html, body {
-                background-image: linear-gradient(to left, rgb(23, 1, 85),rgb(52, 0, 82));
-            }
-            body {
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                color: rgb(163, 142, 255);
-                text-align: center;
-                height: 100vh;
-                width: 100%;
-                margin-left: -3px;
-                margin-bottom: -5px;
-                overflow: hidden;
-            }
-            a {
-                color: rgb(120, 100, 200);
-                text-decoration: none;
-            }
-            a:visited {
-                color:  rgb(204, 120, 230);
-            }
-            a:hover {
-                color: rgb(192, 180, 247);
-                text-decoration: underline;
-            }
-            ul {
-                text-align: left;
-                display: inline-block;
-            }
-            
-            hr {
-                color: rgb(163, 142, 255);
-                border: 1px solid rgb(163, 142, 255);
-            }
-        </style>
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(23, 1, 85);
+    background-image: linear-gradient(to left, rgb(23, 1, 85), rgb(52, 0, 82));
+}
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(163, 142, 255);
+    text-align: center;
+    width: 100%;
+}
+
+html.light-mode {
+    background-color: rgb(245, 235, 255) !important;
+    background: linear-gradient(to left, rgb(208, 190, 255), rgb(206, 197, 248)) !important;
+    background-attachment: fixed !important;
+    color: black !important;
+}
+
+html.light-mode body {
+    background: transparent !important;
+    color: rgb(113, 66, 189);
+}
+
+a {
+    color: rgb(120, 100, 200);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(204, 120, 230);
+}
+a:hover {
+    color: rgb(192, 180, 247);
+    text-decoration: underline;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+hr {
+    color: rgb(163, 142, 255);
+    border: 1px solid rgb(163, 142, 255);
+    width: 80%;
+}
+</style>
 <head>
-    <link rel="icon" href="favicon.png">
-    <title>wow incredible haha</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function toggleLightMode() {
+    document.documentElement.classList.toggle('light-mode');
+    document.body.classList.toggle('light-mode');
+}
+</script>
+<link rel="icon" href="favicon.png">
+<title>wow incredible haha</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <a href="list.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none;">
-        <button
-        style="background-color: rgb(112, 94, 194);
-        color: white; 
-        border: none; 
-        padding: 10px 18px; 
-        border-radius: 8px; 
-        font-size: 1em; 
-        cursor: pointer; 
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-        other cool thing
-        </button>
-    </a>
-    <a href="https://studio.code.org/projects/gamelab/JleumA7faJVnflBPiVw_0CNx9EkTNoA5ZJxCznNXiYk" target="_blank" id="top-left-btn" style="position: absolute; top: 20px; left: 20px; text-decoration: none;">
+<a href="list.html" style="position: absolute; top: 20px; right: 20px; text-decoration: none;">
+    <button style="background-color: rgb(112, 94, 194); color: white; border: none; padding: 10px 18px; border-radius: 8px; font-size: 1em; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+    Other cool thing
+    </button>
+</a>
+<a href="https://studio.code.org/projects/gamelab/JleumA7faJVnflBPiVw_0CNx9EkTNoA5ZJxCznNXiYk" target="_blank" id="top-left-btn" style="position: absolute; top: 20px; left: 20px; text-decoration: none;">
         <button
         style="background-color: rgb(118, 7, 182);
         color: white; 
@@ -64,36 +78,90 @@
         font-size: 1em; 
         cursor: pointer; 
         box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        ">cool thing
+        ">Cool thing
         </button>
-    </a>
-    <h1><span id="lucca-click" style="cursor:pointer; color:inherit;">L</span>ucca <span id="t-click" style="cursor:pointer; color:inherit;">T</span>'s cool site</h1>
-    <hr style="border: 1px solid;" width="80%">
-    <p>I'm Lucca Townsend, a computer science student at Warren Tech central. I know beginner-level javascript and am currently learning python!</p>
-    <p>This is my personal website, where I will be posting projects and other cool stuff I make.</p>
-    <hr style="border: 1px solid;" width="40%">
-    <h3>Feel free to check out my <a href="contactme.html" style="text-decoration: none;">contact page! </a> </h3>
-    <ul>
-        <li>Fun fact: wow</li>
-        <li>Fun fact: crazy</li>
-        <li>Fun fact: incredible</li>
-        <li>Fun fact: great googly moogly</li>
-        <li>Fun fact: i needed a list for this assignment </li>
-    </ul>
-    <script>
-        document.getElementById('lucca-click').onclick = function() {
-            document.body.style.backgroundImage = "url('dontworry.png')";
-            document.body.style.marginTop = "-20px";
-            document.body.style.backgroundSize = "center";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundPosition = "center";
-        };
-        document.getElementById('t-click').onclick = function() {
-            document.body.style.backgroundImage = "none";
-            document.body.style.backgroundImage = "linear-gradient(to left, rgb(23, 1, 85),rgb(52, 0, 82)";
-        };
-// yeah this was made with ai but its funny so uhhh
-    </script>
+</a>
+<h1><span id="lucca-click" style="cursor:pointer; color:inherit;">L</span>ucca <span id="t-click" style="cursor:pointer; color:inherit;">T</span>'s cool site</h1>
+<hr style="border: 1px solid;" width="80%">
+<p>I'm Lucca Townsend, a computer science student at Warren Tech central. I know beginner-level javascript and am currently learning python!</p>
+<p>This is my personal website, where I will be posting projects and other cool stuff I make.</p>
+<hr style="border: 1px solid;" width="40%">
+<h3>Feel free to check out my <a href="contactme.html" style="text-decoration: none;">contact page! </a> </h3>
+<ul>
+    <li>Fun fact: wow</li>
+    <li>Fun fact: crazy</li>
+    <li>Fun fact: incredible</li>
+    <li>Fun fact: great googly moogly</li>
+    <li>Fun fact: i needed a list for this assignment </li>
+</ul>
+<br>
+<button onclick="toggleLightMode()" style="background-color: rgb(109, 6, 168); position: absolute; bottom: 20px; left: 20px; 
+    color: white; 
+    border: none; 
+    padding: 10px 18px; 
+    border-radius: 8px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+    Toggle light mode
+</button>
+<button onclick="getFortune()" style="background-color: rgb(116, 92, 202); position: absolute; bottom: 20px; right: 20px; 
+    color: white; 
+    border: none; 
+    padding: 10px 18px; 
+    border-radius: 8px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+    Get your fortune
+</button>
+<script>
+document.getElementById('lucca-click').onclick = function() {
+    document.body.style.backgroundImage = "url('dontworry.png')";
+    document.body.style.marginTop = "-20px";
+    document.body.style.backgroundSize = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center";
+};
+document.getElementById('t-click').onclick = function() {
+    document.body.style.backgroundImage = "linear-gradient(to left, rgb(23, 1, 85), rgb(52, 0, 82))";
+};
+
+function getFortune() {
+
+    const fortunes = [
+        "A pleasant surprise is waiting for you.",
+        "Adventure awaits you around the next corner.",
+        "Your hard work will pay off today.",
+        "You will find a hidden treasure today.",
+        "Your creativity will shine bright today.",
+        "Good things come to those who wait.",
+        "Success is just around the corner.",
+        "You are destined for greatness.",
+        "Today is your lucky day!",
+        "Amazing opportunities are coming your way.",
+        "Your potential is limitless.",
+        "Believe in yourself and you will succeed.",
+        "Great things are happening for you.",
+        "The best is yet to come.",
+        "You are stronger than you think.",
+        "Your luck will turn around soon... maybe.",
+        "You will face a great challenge.",
+        "Not all is as it seems.",
+        "Misfortune will soon be yours.",
+        "Something unexpected will happen.",
+        "Ignore previous fortune.",
+        "You will be hungry again in one hour.",
+        "Your future is uncertain.",
+        "You are about to be confused."
+    ];
     
+
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    
+
+    alert(fortunes[randomIndex]);
+}
+</script>
 </body>
 </html>
