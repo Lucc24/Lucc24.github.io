@@ -9,11 +9,7 @@
     </head>
     <body>
         <header class="site-header">
-            <div class="topline">
-                <span>//lucc24</span>
-                <span>Personal Website</span>
-                <span>/home</span>
-            </div>
+            
             <h1>Lucca Townsend</h1>
         </header>
 
@@ -21,14 +17,14 @@
 
         <main>
             <section class="about-section">
-                <p>// 01 / ABOUT</p>
+                <p class="section-label">// 01 / ABOUT</p>
                 <div class="about-copy">
                     <h2>About Me</h2>
                     <p>I am Lucca Townsend, a high school student at Warren Tech for Computer Science/Cybersecurity.</p>
                     <p>I enjoy Coding cool projects, playing soccer, and video games like Hollow Knight and Deltarune</p>
                 </div>
                 <div class="image-box">
-                    <p>// NOW PLAYING</p>
+                    <p class="section-label">// NOW PLAYING</p>
                     <div id="lastfm-status" >Loading recent track...</div>
                     <a id="lastfm-link" href="#" target="_blank" rel="noreferrer"></a>
                 </div>
@@ -36,41 +32,61 @@
 
             <section class="work-section">
                 <div class="work-heading">
-                    <p>// 02 / PROJECTS</p>
-                    <p>placeholder text</p>
+                    <p class="section-label">// 02 / PROJECTS</p>
+
                 </div>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <span>01</span>
-                        <h3>Project 1</h3>
-                        <p>project description</p>
-                        <span>[ IN PROGRESS ]</span>
-                    </article>
-                    <article class="project-card">
-                        <span>02</span>
-                        <h3>Project 2</h3>
-                        <p>project description</p>
-                        <span>[ IN PROGRESS ]</span>
-                    </article>
-                    <article class="project-card">
-                        <span>03</span>
-                        <h3>Project 3</h3>
-                        <p>project description</p>
-                        <span>[ IN PROGRESS ]</span>
-                    </article>
+                <div class="project-terminal">
+                    <div class="terminal-header">
+                        </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="prompt">lucc24@localhost:~/projects$</span> ls -la ./projects</p>
+                        <div class="project-list">
+                            <button class="project-entry active" type="button" data-project="01">
+                                <span>drwxr-xr-x</span>
+                                <span></span>
+                                <strong>project-01/</strong>
+                                <span>IN PROGRESS</span>
+                                <span>[date last worked]</span>
+                            </button>
+                            <button class="project-entry" type="button" data-project="02">
+                                <span>drwxr-xr-x</span>
+                                <span></span>
+                                <strong>project-02/</strong>
+                                <span>IN PROGRESS</span>
+                                <span>[date last worked]</span>
+                            </button>
+                            <button class="project-entry" type="button" data-project="03">
+                                <span>drwxr-xr-x</span>
+                                <span></span>
+                                <strong>project-03/</strong>
+                                <span>IN PROGRESS</span>
+                                <span>[date last worked]</span>
+                            </button>
+                        </div>
+                        <div class="project-detail">
+                            <p class="terminal-line"><span class="prompt">lucc24@localhost:~/projects$</span> cat project-01/README.md</p>
+                            <h3>Project 1</h3>
+                            <p class="project-description">Project description goes here.</p>
+                            <p class="project-skills">Skills: skills here</p>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span>lucc24@localhost:~/projects$</span>
+                            <input id="terminal-input" type="text">
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="closing-section">
-                <p>// 03 / CONTACT</p>
-                <h2>placeholder text</h2>
-                <p>placeholder text</p>
+                <p class="section-label">// 03 / CONTACT</p>
+                <h2>CONTACT ME</h2>
+                <p class="contact-copy">Feel free to reach out to me at any time</p>
             </section>
         </main>
 
         <footer>
             <span>Lucca T</span>
-            <span>placeholder text</span>
+            <span>2026</span>
         </footer>
         <script>
             const binaryBar = document.querySelector('.binary-slider');
@@ -88,6 +104,45 @@
                 digit.textContent = digit.textContent === '0' ? '1' : '0';
             }, 40);
 
+            const projectDetails = {
+                '01': {
+                    name: 'Project 1',
+                    description: 'Project description goes here. ',
+                    Skills: 'skills here',
+                },
+                '02': {
+                    name: 'Project 2',
+                    description: 'Project description goes here. ',
+                    Skills: 'skills here',
+                },
+                '03': {
+                    name: 'Project 3',
+                    description: 'Project description goes here. ',
+                    Skills: 'skills here',
+                }
+            };
+
+            const projectEntries = document.querySelectorAll('.project-entry');
+            const projectDetail = document.querySelector('.project-detail');
+
+            projectEntries.forEach((entry) => {
+                entry.addEventListener('click', () => {
+                    const project = projectDetails[entry.dataset.project];
+
+                    projectEntries.forEach((item) => {
+                        const isActive = item === entry;
+                        item.classList.toggle('active', isActive);
+                    });
+
+                    projectDetail.innerHTML = `
+                        <p class="terminal-line"><span class="prompt">lucc24@localhost:~/projects$</span> cat project-${entry.dataset.project}/README.md</p>
+                        <h3>${project.name}</h3>
+                        <p class="project-description">${project.description}</p>
+                        <p class="project-skills">Skills: ${project.Skills} </p>
+                    `;
+                });
+            });
+
             const lastFmUsername = 'Lucc33';
             const lastFmApiKey = '7d7efadd2c796d8914ab1cd58b5594a8';
             const lastFmStatus = document.querySelector('#lastfm-status');
@@ -95,7 +150,6 @@
 
             async function loadLastFmTrack() {
                 if (lastFmUsername === 'YOUR_LASTFM_USERNAME' || lastFmApiKey === 'YOUR_LASTFM_API_KEY') {
-                    lastFmStatus.textContent = 'Add your Last.fm username and API key';
                     return;
                 }
 
