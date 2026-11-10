@@ -262,7 +262,7 @@ h2 {
     align-items: end;
     display: grid;
     gap: 30px;
-    grid-template-columns: 1fr 0.4fr;
+    grid-template-columns: 2fr 0.4fr;
     grid-template-rows: auto auto;
 }
 
@@ -272,7 +272,6 @@ h2 {
 }
 
 .contact-text {
-    
     margin: 0;
 }
 
